@@ -7,10 +7,10 @@ using Newtonsoft.Json;
 
 namespace DentalEstrada.Models
 {
-    public class Patient
+    public class Inquiry
     {
         [Key]
-        public int PatientID { get; set; }
+        public int InquiryID { get; set; }
 
         public string FirstName { get; set; }
 

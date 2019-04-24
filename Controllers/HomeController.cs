@@ -103,9 +103,6 @@ namespace dental.Controllers
         }
 
 
-
-
-
         //?            END OF WEBSITE FEATURES
         //?            END OF WEBSITE FEATURES
         //?            END OF WEBSITE FEATURES
@@ -155,7 +152,7 @@ namespace dental.Controllers
             if (submission.Password == null)
             {
                 ModelState.AddModelError("Password", "Please populate Password Field.");
-                return View("Index");
+                return View("Admin");
             }
 
 
@@ -167,7 +164,7 @@ namespace dental.Controllers
                 {
                     // Add an error to ModelState and return to View!
                     ModelState.AddModelError("Email", "Invalid Email/Password");
-                    return View("Index");
+                    return View("Admin");
                 }
 
                 // Initialize hasher object
@@ -180,11 +177,11 @@ namespace dental.Controllers
                 if (result == 0)
                 {
                     ModelState.AddModelError("Email", "Invalid Email/Password");
-                    return View("Index");
+                    return View("Admin");
                 }
             }
             HttpContext.Session.SetInt32("LoggedUser", userInDb.UserID);
-            return RedirectToAction("Dashboard");
+            return RedirectToAction("AdminDashboard");
         }
 
     }
