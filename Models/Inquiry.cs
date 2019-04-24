@@ -11,15 +11,19 @@ namespace DentalEstrada.Models
     {
         [Key]
         public int InquiryID { get; set; }
-
+        [Required]
+        [MinLength(2)]
         public string FirstName { get; set; }
-
+        [Required]
+        [MinLength(2)]
         public string LastName { get; set; }
-
+        [Required]
+        
         public int Phone { get; set; }
-
+        [Required]
+        [MinLength(2)]
         public string Email { get; set; }
-
+        
         public string Message { get; set; }
 
         public string BestTime { get; set; }
