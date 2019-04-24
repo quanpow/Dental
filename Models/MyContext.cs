@@ -10,7 +10,8 @@ namespace DentalEstrada.Models
 
         // "users" table is represented by this DbSet "Users"
         public DbSet<User> User { get; set; }
-        public DbSet<Patient> Patient { get; set; }
+        public DbSet<Inquiry> Inquiry { get; set; }
+        public DbSet<Appointment> Appointment { get; set; }
 
     }
 }
