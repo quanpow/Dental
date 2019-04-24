@@ -52,9 +52,16 @@ namespace dental.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        [HttpGet("appointmentpage")]
+        public IActionResult Appointment()
         {
             return View();
+        }
+
+        [HttpGet("setnewappointment")]
+        public IActionResult SetAppointment()
+        {
+            return RedirectToAction("appointmentpage");
         }
 
 
@@ -63,6 +70,12 @@ namespace dental.Controllers
         //!!!!!!!!!!!  POSTS
         //!!!!!!!!!!!  POSTS
         //!!!!!!!!!!!  POSTS
+
+        [HttpPost("createappointment")]
+        public IActionResult CreateAppointment()
+        {
+            return RedirectToAction("appointmentpage");
+        }
 
 
 

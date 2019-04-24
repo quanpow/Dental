@@ -1,0 +1,48 @@
+@using DentalEstrada.Models
+@model Inquiry
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Appointment Page</title>
+    <link rel="stylesheet" href="~/css/style.css"/>
+</head>
+<body>
+
+     <form asp-action="appointment" asp-controller="Home" method="post">
+        
+        <div class="leftform">
+        <span asp-validation-for="FirstName"></span>
+        <br>
+        <label asp-for="FirstName">First Name</label>
+        <input asp-for="FirstName">
+        <br>
+
+        <span asp-validation-for="LastName"></span>
+        <br>
+        <label asp-for="LastName">Last Name</label>
+        <input asp-for="LastName">
+        <br>
+        
+        <span asp-validation-for="Email"></span>
+        <br>
+        <label asp-for="Email">Email</label>
+        <input asp-for="Email">
+        <br>
+
+        <span asp-validation-for="Phone"></span>
+        <br>
+        <label asp-for="Phone">Phone Number</label>
+        <input asp-for="Phone">
+        <br>
+
+        </div>
+    <br>
+    <input value="Submit" class="button" type="submit">    
+    </form> 
+    
+</body>
+</html>
