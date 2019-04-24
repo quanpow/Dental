@@ -11,10 +11,12 @@ namespace DentalEstrada.Models
     {
         [Key]
         public int UserID { get; set; }
+
         [Required]
         [MinLength(2)]
         [Display(Name = "First Name: ")]
         public string FirstName { get; set; }
+
         [Required]
         [MinLength(2)]
         [Display(Name = "Last Name: ")]
@@ -23,6 +25,7 @@ namespace DentalEstrada.Models
         [Required]
         [Display(Name = "Email:     ")]
         public string Email { get; set; }
+
         [DataType(DataType.Password)]
         [Required]
         [Display(Name = "Password:        ")]
@@ -31,8 +34,11 @@ namespace DentalEstrada.Models
         [RegularExpression(@"^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$", ErrorMessage = "1 Letter, 1 Special, 1 Number")]
 
         public string Password { get; set; }
+
         public DateTime CreatedAt { get; set; } = DateTime.Now;
+
         public DateTime UpdatedAt { get; set; } = DateTime.Now;
+
         // Will not be mapped to your users table!
         [NotMapped]
         [Compare("Password")]

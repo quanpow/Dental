@@ -1,0 +1,41 @@
+@using DentalEstrada.Models
+@model Appointment
+
+<h1>New Appointment</h1>
+<br>
+<form asp-action="CreateAppointment" asp-controller="Home" method="post">
+        <span asp-validation-for="CustomerName"></span>
+        <label asp-for="CustomerName"></label>
+        <br>
+        <input asp-for="CustomerName">
+        <br><br>
+
+        <span asp-validation-for="Phone"></span>
+        <label asp-for="Phone"></label>
+        <br>
+        <input asp-for="Phone">
+        <br><br>
+        @ViewBag.Error
+        <span asp-validation-for="StartDate"></span>
+        <label asp-for="StartDate"></label>
+        <br>
+        <input asp-for="StartDate">
+        <br><br>
+
+        <span asp-validation-for="EndDate"></span>
+        <label asp-for="EndDate"></label>
+        <br>
+        <input asp-for="EndDate">
+        <br><br>
+
+        <span asp-validation-for="Description"></span>
+        <label asp-for="Description"></label>
+        <br>
+        <input asp-for="Description">
+        <br><br>
+        <br>
+
+        <br>
+
+        <input name="" id="" class="btn btn-primary" type="submit" value="Create Appointment">
+        </form>

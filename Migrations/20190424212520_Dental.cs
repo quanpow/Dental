@@ -9,19 +9,38 @@ namespace dental.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Patient",
+                name: "Appointment",
                 columns: table => new
                 {
-                    PatientID = table.Column<int>(nullable: false)
+                    AppointmentID = table.Column<int>(nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    FirstName = table.Column<string>(nullable: true),
-                    LastName = table.Column<string>(nullable: true),
-                    Message = table.Column<string>(nullable: true),
-                    Appointment = table.Column<DateTime>(nullable: false)
+                    StartDate = table.Column<DateTime>(nullable: false),
+                    EndDate = table.Column<DateTime>(nullable: false),
+                    CustomerName = table.Column<string>(nullable: true),
+                    Description = table.Column<string>(nullable: true),
+                    Phone = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Patient", x => x.PatientID);
+                    table.PrimaryKey("PK_Appointment", x => x.AppointmentID);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Inquiry",
+                columns: table => new
+                {
+                    InquiryID = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    FirstName = table.Column<string>(nullable: true),
+                    LastName = table.Column<string>(nullable: true),
+                    Phone = table.Column<int>(nullable: false),
+                    Email = table.Column<string>(nullable: true),
+                    Message = table.Column<string>(nullable: true),
+                    BestTime = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Inquiry", x => x.InquiryID);
                 });
 
             migrationBuilder.CreateTable(
@@ -46,7 +65,10 @@ namespace dental.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Patient");
+                name: "Appointment");
+
+            migrationBuilder.DropTable(
+                name: "Inquiry");
 
             migrationBuilder.DropTable(
                 name: "User");

@@ -89,12 +89,12 @@ using DentalEstrada.Models;
 ");
             EndContext();
             BeginContext(392, 277, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d08a88435e394e73873d83257c747872", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "84d57eff2e7a4a2cbed0ae54396f7b3f", async() => {
                 BeginContext(398, 122, true);
                 WriteLiteral("\n    <h1> Welcome to the Dental Estrada Admin Page</h1>\n    <div class=\"container\">\n        <div class=\"one\">\n            ");
                 EndContext();
                 BeginContext(520, 32, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "b95cee7dc7c44d99935a1d1f3dbc4865", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "7dadbceb9592451793f96f871104e661", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper>();
@@ -113,7 +113,7 @@ using DentalEstrada.Models;
                 WriteLiteral("\n        </div>\n        <div class=\"two\">\n            ");
                 EndContext();
                 BeginContext(606, 29, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "3fc40865b0c74452888b4131850ac36c", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "50211ce1238848688430c4ac2c344206", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper>();

@@ -89,17 +89,61 @@ namespace dental.Controllers
         //!!!!!!!!! ADMIN GETS & POSTS !!!!!!!!!!!!!!!!//
 
 
+        //!!!!!!!!! ADMIN GETS//!!!!!!!!! ADMIN GETS//!!!!!!!!! ADMIN GETS
+
 
         [HttpGet("admin")]
         public IActionResult Admin()
         {
+            HttpContext.Session.Clear();
             return View();
         }
 
         [HttpGet("admin/dashboard")]
         public IActionResult AdminDashboard()
         {
+            if (HttpContext.Session.GetInt32("LoggedUser") == null)
+            {
+                return RedirectToAction("Index");
+            }
             return View();
+        }
+
+        [HttpGet("admin/appointment/new")]
+        public IActionResult New()
+        {
+            if (HttpContext.Session.GetInt32("LoggedUser") == null)
+            {
+                return RedirectToAction("Index");
+            }
+            return View();
+        }
+
+
+        //!!!!!!!!! ADMIN POST//!!!!!!!!! ADMIN POST//!!!!!!!!! ADMIN POST
+
+        [HttpPost]
+        public IActionResult CreateAppointment(Appointment newAppointment)
+        {
+            if (ModelState.IsValid)
+            {
+                DateTime CurrentTime = DateTime.Now;
+                DateTime thisAppointment = newAppointment.StartDate;
+
+                if (thisAppointment < CurrentTime)
+                {
+                    @ViewBag.Error = "Date must be in the future.";
+                    return View("New");
+                }
+
+
+                dbContext.Add(newAppointment);
+                dbContext.SaveChanges();
+                int id = newAppointment.AppointmentID;
+                string url = $"appointment/{id}";
+                return base.Redirect(url);
+            }
+            return View("New");
         }
 
 

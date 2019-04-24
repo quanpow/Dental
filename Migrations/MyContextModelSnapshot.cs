@@ -17,12 +17,34 @@ namespace dental.Migrations
                 .HasAnnotation("ProductVersion", "2.1.8-servicing-32085")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
-            modelBuilder.Entity("DentalEstrada.Models.Patient", b =>
+            modelBuilder.Entity("DentalEstrada.Models.Appointment", b =>
                 {
-                    b.Property<int>("PatientID")
+                    b.Property<int>("AppointmentID")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<DateTime>("Appointment");
+                    b.Property<string>("CustomerName");
+
+                    b.Property<string>("Description");
+
+                    b.Property<DateTime>("EndDate");
+
+                    b.Property<int>("Phone");
+
+                    b.Property<DateTime>("StartDate");
+
+                    b.HasKey("AppointmentID");
+
+                    b.ToTable("Appointment");
+                });
+
+            modelBuilder.Entity("DentalEstrada.Models.Inquiry", b =>
+                {
+                    b.Property<int>("InquiryID")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("BestTime");
+
+                    b.Property<string>("Email");
 
                     b.Property<string>("FirstName");
 
@@ -30,9 +52,11 @@ namespace dental.Migrations
 
                     b.Property<string>("Message");
 
-                    b.HasKey("PatientID");
+                    b.Property<int>("Phone");
 
-                    b.ToTable("Patient");
+                    b.HasKey("InquiryID");
+
+                    b.ToTable("Inquiry");
                 });
 
             modelBuilder.Entity("DentalEstrada.Models.User", b =>

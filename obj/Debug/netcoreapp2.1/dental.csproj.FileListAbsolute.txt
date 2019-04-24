@@ -66,3 +66,4 @@
 /Users/eugenebenitez/Desktop/C#_Projects/Dental-Estrada/obj/Debug/netcoreapp2.1/Razor/Views/Home/LoginPartial.g.cshtml.cs
 /Users/eugenebenitez/Desktop/C#_Projects/Dental-Estrada/obj/Debug/netcoreapp2.1/Razor/Views/Home/RegisterPartial.g.cshtml.cs
 /Users/eugenebenitez/Desktop/C#_Projects/Dental-Estrada/obj/Debug/netcoreapp2.1/Razor/Views/Home/AdminDashboard.g.cshtml.cs
+/Users/eugenebenitez/Desktop/C#_Projects/Dental-Estrada/obj/Debug/netcoreapp2.1/Razor/Views/Home/New.g.cshtml.cs
