@@ -29,14 +29,14 @@ namespace DentalEstrada
         public void ConfigureServices(IServiceCollection services)
         {
 
-            string mySqlConnection = "server=localhost;userid=root;password=root;port=3306;database=mydb;SslMode=None";
+            string mySqlConnection = "server=localhost;userid=root;password=root;port=3306;database=Dental;SslMode=None";
             services.AddDbContext<MyContext>(options => options.UseMySql(mySqlConnection));
 
             services.AddSession();
             services.Configure<CookiePolicyOptions>(options =>
             {
-            // This lambda determines whether user consent for non-essential cookies is needed for a given request.
-            options.CheckConsentNeeded = context => true;
+                // This lambda determines whether user consent for non-essential cookies is needed for a given request.
+                options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 

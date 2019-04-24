@@ -1,0 +1,41 @@
+@using DentalEstrada.Models
+@model User
+
+<style>
+
+.container {
+    width: 95%;
+    margin: auto;
+    padding: 10px;
+}
+
+.one {
+    width: 50%;
+    height: 1000px;
+    float: left;
+    vertical-align: top;
+    display: inline-block;
+}
+
+.two {
+    text-align: justify;
+    position: absolute;
+    vertical-align: top;
+    bottom: 600px;
+    left: 1000px;
+    display: inline-block;
+}
+
+</style>
+
+<body>
+    <h1> Welcome to the Dental Estrada Admin Page</h1>
+    <div class="container">
+        <div class="one">
+            <partial name="RegisterPartial">
+        </div>
+        <div class="two">
+            <partial name="LoginPartial">
+        </div>
+    </div>
+</body>
