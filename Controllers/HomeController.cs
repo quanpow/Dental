@@ -4,12 +4,24 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
+
 using dental.Models;
 
 namespace dental.Controllers
 {
     public class HomeController : Controller
     {
+        private MyContext dbContext;
+
+        // here we can "inject" our context service into the constructor
+        public HomeController(MyContext context)
+        {
+            dbContext = context;
+        }
+
+
         public IActionResult Index()
         {
             return View();
