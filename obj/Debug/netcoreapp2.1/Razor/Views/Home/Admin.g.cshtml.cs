@@ -61,7 +61,7 @@ using DentalEstrada.Models;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             BeginContext(40, 56, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "b1039b42a19b4af8aaa980eabf434e3d", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "749c2d4187144c6a8f7f1f34c2cff41a", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -80,12 +80,12 @@ using DentalEstrada.Models;
             WriteLiteral("\n\n");
             EndContext();
             BeginContext(98, 434, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ca570fa413b2430ebd8d0e0fe3a39403", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6fabb96f73f24310aad2fe1409890491", async() => {
                 BeginContext(104, 223, true);
                 WriteLiteral("\n    <div class=\"container\">\n        <h1> Welcome to the Dental Estrada Admin Page</h1>\n        <h4 style=\"color:red\">Registration for demo purposes.</h4>\n        <div class=\"row\">\n            <div class=\"col\">\n            ");
                 EndContext();
                 BeginContext(327, 32, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "fbd0a18e24174f46a6f98f704210d218", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "7906bea4db0443d6b1b10a76460cc2a5", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper>();
@@ -104,7 +104,7 @@ using DentalEstrada.Models;
                 WriteLiteral("\n            </div>\n            <br><br><br><br>\n            <div class=\"col\">\n            ");
                 EndContext();
                 BeginContext(450, 29, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "f7580207c715438984d83366ad1930b6", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "3461727b36f64d0691a2fa9bcdcc22f0", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper>();

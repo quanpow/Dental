@@ -20,7 +20,8 @@ namespace DentalEstrada.Models
 
         [Required]
         [RegularExpression(@"\(?\d{3}\)?-? *\d{3}-? *-?\d{4}", ErrorMessage = "Invalid Number")]
-        public int Phone { get; set; }
+        public string Phone { get; set; }
+
         [Required]
         [MinLength(2)]
         public string Email { get; set; }
