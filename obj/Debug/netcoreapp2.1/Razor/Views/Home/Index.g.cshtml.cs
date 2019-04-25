@@ -59,12 +59,12 @@ using dental.Models;
             WriteLiteral("<!DOCTYPE html>\r\n<html lang=\"en\">\r\n");
             EndContext();
             BeginContext(35, 261, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "12dc3f50d53749b287749dfbf491d55c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c4af7a57a6fa4d8499459210eea7fc04", async() => {
                 BeginContext(41, 199, true);
                 WriteLiteral("\r\n    <meta charset=\"UTF-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n    <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\r\n    <title>Home Page</title>\r\n    ");
                 EndContext();
                 BeginContext(240, 47, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "8a681ff6f41c4d4398141f965f35c724", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "f2a0d9c547734ba9aba7ece5035239ca", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -98,12 +98,12 @@ using dental.Models;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(298, 129, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f419ae53fb174d1eab3ecf82ac3cfde9", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4a4ba4430daf4e2492471ce68f43c6dd", async() => {
                 BeginContext(304, 87, true);
                 WriteLiteral("\r\n    <h3><a href=\"appointmentpage\"><button>Request Appointment</button></a></h3>\r\n    ");
                 EndContext();
                 BeginContext(391, 21, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8144459c17ba46d2883ed5a3f280c552", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ae19fdda5b2e4a319999253c6a6be02b", async() => {
                     BeginContext(397, 8, true);
                     WriteLiteral("\r\n\r\n    ");
                     EndContext();

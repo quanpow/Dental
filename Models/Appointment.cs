@@ -29,10 +29,8 @@ namespace DentalEstrada.Models
         public string Description { get; set; }
 
         [Required]
-        [Range(1, 9999999999999)]
         [Display(Name = "Phone Number: ")]
-        public int Phone { get; set; }
-
+        public string Phone { get; set; }
 
     }
 }

@@ -1,7 +1,7 @@
 @using DentalEstrada.Models
 @model Appointment
 
-<h1>New Appointment</h1>
+<h1>New Appointment <a class="btn btn-primary" href="/admin/dashboard" role="button">Dashboard</a></h1>
 <br>
 <form asp-action="CreateAppointment" asp-controller="Home" method="post">
         <span asp-validation-for="CustomerName"></span>
@@ -38,4 +38,4 @@
         <br>
 
         <input name="" id="" class="btn btn-primary" type="submit" value="Create Appointment">
-        </form>
+</form>

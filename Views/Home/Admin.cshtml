@@ -1,41 +1,19 @@
 @using DentalEstrada.Models
 @model User
-
-<style>
-
-.container {
-    width: 95%;
-    margin: auto;
-    padding: 10px;
-}
-
-.one {
-    width: 50%;
-    height: 1000px;
-    float: left;
-    vertical-align: top;
-    display: inline-block;
-}
-
-.two {
-    text-align: justify;
-    position: absolute;
-    vertical-align: top;
-    bottom: 600px;
-    left: 1000px;
-    display: inline-block;
-}
-
-</style>
+<link rel="stylesheet" href="~/css/bootstrap-grid.css"/>
 
 <body>
-    <h1> Welcome to the Dental Estrada Admin Page</h1>
     <div class="container">
-        <div class="one">
+        <h1> Welcome to the Dental Estrada Admin Page</h1>
+        <h4 style="color:red">Registration for demo purposes.</h4>
+        <div class="row">
+            <div class="col">
             <partial name="RegisterPartial">
-        </div>
-        <div class="two">
+            </div>
+            <br><br><br><br>
+            <div class="col">
             <partial name="LoginPartial">
+            </div>
         </div>
     </div>
 </body>

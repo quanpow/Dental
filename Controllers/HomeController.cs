@@ -119,6 +119,12 @@ namespace dental.Controllers
             {
                 return RedirectToAction("Index");
             }
+
+            var AllAppointments = dbContext.Appointment
+            .OrderBy(d => d.StartDate)
+            .ToList();
+
+            @ViewBag.AllAppointments = AllAppointments;
             return View();
         }
 
@@ -130,6 +136,20 @@ namespace dental.Controllers
                 return RedirectToAction("Index");
             }
             return View();
+        }
+
+        [HttpGet("admin/appointment/{id}")]
+        public IActionResult AppointmentProfile(int id)
+        {
+            if (HttpContext.Session.GetInt32("LoggedUser") == null)
+            {
+                return RedirectToAction("Index");
+            }
+
+            Appointment thisAppointment = dbContext.Appointment
+            .SingleOrDefault(i => i.AppointmentID == id);
+
+            return View(thisAppointment);
         }
 
 
@@ -153,8 +173,7 @@ namespace dental.Controllers
                 dbContext.Add(newAppointment);
                 dbContext.SaveChanges();
                 int id = newAppointment.AppointmentID;
-                string url = $"appointment/{id}";
-                return base.Redirect(url);
+                return View("AdminDashboard");
             }
             return View("New");
         }

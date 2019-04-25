@@ -16,9 +16,9 @@ namespace dental.Migrations
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     StartDate = table.Column<DateTime>(nullable: false),
                     EndDate = table.Column<DateTime>(nullable: false),
-                    CustomerName = table.Column<string>(nullable: true),
-                    Description = table.Column<string>(nullable: true),
-                    Phone = table.Column<int>(nullable: false)
+                    CustomerName = table.Column<string>(nullable: false),
+                    Description = table.Column<string>(nullable: false),
+                    Phone = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -31,10 +31,10 @@ namespace dental.Migrations
                 {
                     InquiryID = table.Column<int>(nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    FirstName = table.Column<string>(nullable: true),
-                    LastName = table.Column<string>(nullable: true),
+                    FirstName = table.Column<string>(nullable: false),
+                    LastName = table.Column<string>(nullable: false),
                     Phone = table.Column<int>(nullable: false),
-                    Email = table.Column<string>(nullable: true),
+                    Email = table.Column<string>(nullable: false),
                     Message = table.Column<string>(nullable: true),
                     BestTime = table.Column<string>(nullable: true)
                 },

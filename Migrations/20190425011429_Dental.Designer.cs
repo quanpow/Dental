@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace dental.Migrations
 {
     [DbContext(typeof(MyContext))]
-    [Migration("20190424212520_Dental")]
+    [Migration("20190425011429_Dental")]
     partial class Dental
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,13 +24,16 @@ namespace dental.Migrations
                     b.Property<int>("AppointmentID")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("CustomerName");
+                    b.Property<string>("CustomerName")
+                        .IsRequired();
 
-                    b.Property<string>("Description");
+                    b.Property<string>("Description")
+                        .IsRequired();
 
                     b.Property<DateTime>("EndDate");
 
-                    b.Property<int>("Phone");
+                    b.Property<string>("Phone")
+                        .IsRequired();
 
                     b.Property<DateTime>("StartDate");
 
@@ -46,11 +49,14 @@ namespace dental.Migrations
 
                     b.Property<string>("BestTime");
 
-                    b.Property<string>("Email");
+                    b.Property<string>("Email")
+                        .IsRequired();
 
-                    b.Property<string>("FirstName");
+                    b.Property<string>("FirstName")
+                        .IsRequired();
 
-                    b.Property<string>("LastName");
+                    b.Property<string>("LastName")
+                        .IsRequired();
 
                     b.Property<string>("Message");
 

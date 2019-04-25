@@ -1,4 +1,13 @@
+@using DentalEstrada.Models
+@model Appointment
+
 <link rel="stylesheet" href="~/css/bootstrap-grid.css"/>
+
+<style>
+    .text {
+        font-size: 10px;
+    }
+</style>
 
 <center><h1>Administrator Dashboard</h1>
 
@@ -6,8 +15,34 @@
 
 </center>
 
-
 <div class="row">
-    <div class="col-8"><center><h3>Appointments</center></h3></div>
-    <div class="col-4"><center><h3>Activity Log</center></h3></div>
+    <div class="col-8">
+        <h3>Appointments</h3>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Customer Name</th>
+                    <th scope="col">Start Date</th>
+                    <th scope="col">End Date</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr style="text-align: center">
+                @foreach (var a in @ViewBag.AllAppointments)
+                {
+                    <th scope="row">@a.CustomerName</th>
+                    <td class="text">@a.StartDate</td>
+                    <td>@a.EndDate</td>
+                    <td>@a.Phone</td>
+                    <td><a class="btn btn-danger href="#" role="button">Delete</a><a class="btn btn-success href="#" role="button">Edit</a></td>
+                }
+                </tr>
+                </tbody>
+            </table>
+    </div>
+    <div class="col-4">
+        <h3>Activity Log</h3>
+    </div>
 </div>
