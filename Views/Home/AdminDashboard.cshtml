@@ -48,7 +48,8 @@
         <h3>Activity Log</h3>
         @foreach (var b in @ViewBag.AllInquiries)
         {
-            <div>@b.FirstName @b.LastName @b.BestTime @b.Phone</div>
+            <div style="border: 1px solid black;">Please Call @b.FirstName @b.LastName at @b.Phone in the @b.BestTime. This Inquiry was sent at @b.CreatedAt</div>
+            <br>
         }
     </div>
 </div>
