@@ -47,6 +47,8 @@ namespace dental.Migrations
 
                     b.Property<string>("BestTime");
 
+                    b.Property<DateTime>("CreatedAt");
+
                     b.Property<string>("Email")
                         .IsRequired();
 

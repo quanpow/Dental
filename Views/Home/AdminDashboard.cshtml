@@ -5,7 +5,7 @@
 
 <style>
     .text {
-        font-size: 10px;
+        font-size: 18px;
     }
 </style>
 
@@ -29,20 +29,25 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr style="text-align: center">
                 @foreach (var a in @ViewBag.AllAppointments)
                 {
-                    <th scope="row">@a.CustomerName</th>
+
+                    <tr style="text-align: center">
+                    <th class="text"scope="row"><a href="/profile/@a.AppointmentID">@a.CustomerName</a></th>
                     <td class="text">@a.StartDate</td>
-                    <td>@a.EndDate</td>
-                    <td>@a.Phone</td>
-                    <td><a class="btn btn-danger href="#" role="button">Delete</a><a class="btn btn-success href="#" role="button">Edit</a></td>
+                    <td class="text">@a.EndDate</td>
+                    <td class="text">@a.Phone</td>
+                    <td class="text"><a class="btn btn-danger href="#" role="button">Delete</a><a class="btn btn-success href="#" role="button">Edit</a></td>
+                    </tr>
                 }
-                </tr>
+
                 </tbody>
             </table>
     </div>
     <div class="col-4">
         <h3>Activity Log</h3>
+        {
+            <div>@b.FirstName @b.LastName @b.BestTime @b.Phone</div>
+        }
     </div>
 </div>

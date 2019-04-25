@@ -12,8 +12,8 @@
 </head>
 <body>
 
-     <form asp-action="appointment" asp-controller="Home" method="post">
-        
+     <form asp-action="CreateInquiry" asp-controller="Home" method="post">
+
         <div class="leftform">
         <span asp-validation-for="FirstName"></span>
         <br>
@@ -26,7 +26,7 @@
         <label asp-for="LastName">Last Name</label>
         <input asp-for="LastName">
         <br>
-        
+
         <span asp-validation-for="Email"></span>
         <br>
         <label asp-for="Email">Email</label>
@@ -37,12 +37,25 @@
         <br>
         <label asp-for="Phone">Phone Number</label>
         <input asp-for="Phone">
+
+        <span asp-validation-for="Message"></span>
+        <br>
+        <label asp-for="Message">Message</label>
+        <textarea class="form-control" rows="5" id="comment" asp-for="Message"></textarea>
+
+        <span asp-validation-for="BestTime"></span>
+        <br>
+        <label asp-for="BestTime">Best Time</label>
+        <select asp-for="BestTime" value="PM">
+        <option value ="AM">AM</option>
+        <option value="PM">PM</option>
+        </select>
         <br>
 
         </div>
     <br>
-    <input value="Submit" class="button" type="submit">    
-    </form> 
-    
+    <input value="Submit" class="button" type="submit">
+    </form>
+
 </body>
 </html>

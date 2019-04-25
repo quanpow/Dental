@@ -52,8 +52,8 @@ namespace dental.Controllers
             return View();
         }
 
-        [HttpGet("appointmentpage")]
-        public IActionResult Appointment()
+        [HttpGet("inquirypage")]
+        public IActionResult Inquiry()
         {
             return View();
         }
@@ -71,10 +71,12 @@ namespace dental.Controllers
         //!!!!!!!!!!!  POSTS
         //!!!!!!!!!!!  POSTS
 
-        [HttpPost("createappointment")]
-        public IActionResult CreateAppointment()
+        [HttpPost("createinquiry")]
+        public IActionResult CreateInquiry(Inquiry newInquiry)
         {
-            return RedirectToAction("appointmentpage");
+            dbContext.Add(newInquiry);
+            dbContext.SaveChanges();
+            return RedirectToAction("Index");
         }
 
 
@@ -124,7 +126,13 @@ namespace dental.Controllers
             .OrderBy(d => d.StartDate)
             .ToList();
 
+            var AllInquiries = dbContext.Inquiry
+            .OrderBy(d => d.CreatedAt)
+            .ToList();
+
             @ViewBag.AllAppointments = AllAppointments;
+            @ViewBag.AllInquiries = AllInquiries;
+
             return View();
         }
 
@@ -138,7 +146,7 @@ namespace dental.Controllers
             return View();
         }
 
-        [HttpGet("admin/appointment/{id}")]
+        [HttpGet("profile/{id}")]
         public IActionResult AppointmentProfile(int id)
         {
             if (HttpContext.Session.GetInt32("LoggedUser") == null)
@@ -155,8 +163,10 @@ namespace dental.Controllers
 
         //!!!!!!!!! ADMIN POST//!!!!!!!!! ADMIN POST//!!!!!!!!! ADMIN POST
 
+
         [HttpPost]
-        public IActionResult CreateAppointment(Appointment newAppointment)
+        [Route("CreateAppt")]
+        public IActionResult CreateAppointments(Appointment newAppointment)
         {
             if (ModelState.IsValid)
             {
@@ -173,7 +183,8 @@ namespace dental.Controllers
                 dbContext.Add(newAppointment);
                 dbContext.SaveChanges();
                 int id = newAppointment.AppointmentID;
-                return View("AdminDashboard");
+                string url = $"profile/{id}";
+                return base.Redirect(url);
             }
             return View("New");
         }

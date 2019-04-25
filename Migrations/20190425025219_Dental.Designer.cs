@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace dental.Migrations
 {
     [DbContext(typeof(MyContext))]
-    [Migration("20190425011429_Dental")]
+    [Migration("20190425025219_Dental")]
     partial class Dental
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -48,6 +48,8 @@ namespace dental.Migrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("BestTime");
+
+                    b.Property<DateTime>("CreatedAt");
 
                     b.Property<string>("Email")
                         .IsRequired();

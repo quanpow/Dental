@@ -29,6 +29,7 @@ namespace DentalEstrada.Models
         public string Description { get; set; }
 
         [Required]
+        [RegularExpression(@"\(?\d{3}\)?-? *\d{3}-? *-?\d{4}", ErrorMessage = "Invalid Number")]
         [Display(Name = "Phone Number: ")]
         public string Phone { get; set; }
 

@@ -36,7 +36,8 @@ namespace dental.Migrations
                     Phone = table.Column<int>(nullable: false),
                     Email = table.Column<string>(nullable: false),
                     Message = table.Column<string>(nullable: true),
-                    BestTime = table.Column<string>(nullable: true)
+                    BestTime = table.Column<string>(nullable: true),
+                    CreatedAt = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {

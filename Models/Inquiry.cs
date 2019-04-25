@@ -17,8 +17,9 @@ namespace DentalEstrada.Models
         [Required]
         [MinLength(2)]
         public string LastName { get; set; }
-        [Required]
 
+        [Required]
+        [RegularExpression(@"\(?\d{3}\)?-? *\d{3}-? *-?\d{4}", ErrorMessage = "Invalid Number")]
         public int Phone { get; set; }
         [Required]
         [MinLength(2)]
@@ -28,6 +29,6 @@ namespace DentalEstrada.Models
 
         public string BestTime { get; set; }
 
-
+        public DateTime CreatedAt { get; set; } = DateTime.Now;
     }
 }

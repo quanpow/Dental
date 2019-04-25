@@ -1,7 +1,22 @@
 @using DentalEstrada.Models
 @model Appointment
 
-<h1>Appointment: <a class="btn btn-primary" href="/admin/dashboard" role="button">Dashboard</a></h1>
+<h1>Appointment: <a style="float:right" class="btn btn-primary" href="/admin/dashboard" role="button">Dashboard</a></h1>
 <br>
-
-@Model.CustomerName
+<br>
+<table class="table">
+    <th>Customer Name</th>
+    <th>Start Date</th>
+    <th>End Date</th>
+    <th>Phone</th>
+    <tr>
+        <td>@Model.CustomerName</td>
+        <td>@Model.StartDate</td>
+        <td>@Model.EndDate</td>
+        <td>@Model.Phone</td>
+    </tr>
+</table>
+<a class="btn btn-danger href="#" role="button">Delete</a>
+<br>
+<br>
+<a class="btn btn-success href="#" role="button">Edit</a>
