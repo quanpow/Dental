@@ -18,6 +18,7 @@
 <div class="row">
     <div class="col-8">
         <h3>Appointments</h3>
+        <h5>(DEMO) Edit functionality to be added</h5>
             <table class="table">
                 <thead>
                 <tr>
@@ -37,7 +38,7 @@
                     <td class="text">@a.StartDate</td>
                     <td class="text">@a.EndDate</td>
                     <td class="text">@a.Phone</td>
-                    <td class="text"><a class="btn btn-danger href="#" role="button">Delete</a><a class="btn btn-success href="#" role="button">Edit</a></td>
+                    <td class="text"><a class="btn btn-danger" href="delete/@a.AppointmentID" role="button">Delete</a><a class="btn btn-success href="#" role="button">Edit</a></td>
                     </tr>
                 }
 
@@ -46,9 +47,10 @@
     </div>
     <div class="col-4">
         <h3>Activity Log</h3>
+        <h3>(Demo) Activities will have a "Completed" Feature and all others will be available to view unless 2 weeks old.</h3>
         @foreach (var b in @ViewBag.AllInquiries)
         {
-            <div style="border: 1px solid black;">Please Call @b.FirstName @b.LastName at @b.Phone in the @b.BestTime. This Inquiry was sent at @b.CreatedAt</div>
+            <div style="border: 1px solid black; padding: 5px;">Please Call @b.FirstName @b.LastName at @b.Phone in the @b.BestTime. This Inquiry was sent at @b.CreatedAt</div>
             <br>
         }
     </div>

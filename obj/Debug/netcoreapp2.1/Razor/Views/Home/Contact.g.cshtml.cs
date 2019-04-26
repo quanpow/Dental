@@ -54,7 +54,7 @@ using dental.Models;
             WriteLiteral("<!DOCTYPE html>\r\n<html>\r\n  ");
             EndContext();
             BeginContext(27, 47, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "be98c676e739405f9f1b6b694b867985", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "83401c3b15fc4fab8d124f2d011ea89a", async() => {
                 BeginContext(33, 34, true);
                 WriteLiteral("\r\n      <title>Contact</title>\r\n  ");
                 EndContext();
@@ -74,7 +74,7 @@ using dental.Models;
             WriteLiteral("\r\n  ");
             EndContext();
             BeginContext(78, 257, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b430a49522d545f5a1251bbc46cb089d", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "deb83409e1b34ed2acab376e03a5c778", async() => {
                 BeginContext(84, 244, true);
                 WriteLiteral("\r\n   \r\n\r\n\r\n<h1><iframe width=\"300\" height=\"250\" frameborder=\"0\" style=\"border:0\"\r\nsrc=\"https://www.google.com/maps/embed/v1/search?q=451SBrandBlvdSanFernandoCA91340&key=AIzaSyAWVhpsBpoyphFz3qu3N3sFEnTiyOEEJ_o\" allowfullscreen></iframe></h1>\r\n\r\n");
                 EndContext();

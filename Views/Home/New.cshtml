@@ -3,6 +3,10 @@
 
 <h1>New Appointment <a class="btn btn-primary" href="/admin/dashboard" role="button">Dashboard</a></h1>
 <br>
+<h5>(DEMO) Phone Validation : "[RegularExpression("\(?\d{3}\)?-? *\d{3}-? *-?\d{4}", ErrorMessage = "Invalid Number")]</h5>
+<br>
+<h5>(Demo) Validations include "Start Date must be in the future" "End Date must be after Start Date" and "Appointments must be in the same day" </h5>
+<br>
 <form asp-action="CreateAppointments" asp-controller="Home" method="post">
         <span asp-validation-for="CustomerName"></span>
         <label asp-for="CustomerName"></label>
