@@ -64,6 +64,12 @@ namespace dental.Controllers
             return RedirectToAction("appointmentpage");
         }
 
+        [HttpGet("services")]
+        public IActionResult Services()
+        {
+            return View("services");
+        }
+
 
         //!!!!!!!!!!!  POSTS
         //!!!!!!!!!!!  POSTS

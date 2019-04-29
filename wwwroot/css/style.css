@@ -5,3 +5,33 @@ body {
 h3 {
     text-align: center;
 }
+
+.indeximg {
+    width: 60%;
+    vertical-align: top;
+    position: relative;
+    left: 200px;
+    display: inline-block
+}
+
+.yelpimg {
+    position: relative;
+    left: 200px;
+    display: inline-block;
+    top: 50px;
+
+}
+
+.facebookimg {
+    position: relative;
+    left: 5px;
+    bottom: 10px;
+    display: inline-block;
+    width: 5%;
+
+}
+
+.aboutimg {
+    text-align: center;
+}
+

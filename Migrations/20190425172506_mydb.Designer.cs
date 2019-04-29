@@ -9,14 +9,14 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace dental.Migrations
 {
     [DbContext(typeof(MyContext))]
-    [Migration("20190425171051_Dental")]
-    partial class Dental
+    [Migration("20190425172506_mydb")]
+    partial class mydb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.1.8-servicing-32085")
+                .HasAnnotation("ProductVersion", "2.1.4-rtm-31024")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
             modelBuilder.Entity("DentalEstrada.Models.Appointment", b =>

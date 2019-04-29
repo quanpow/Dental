@@ -73,8 +73,10 @@
 /Users/andrewquan/Desktop/Projects/dental/obj/Debug/netcoreapp2.1/Razor/Views/Home/AdminDashboard.g.cshtml.cs
 /Users/andrewquan/Desktop/Projects/dental/obj/Debug/netcoreapp2.1/Razor/Views/Home/LoginPartial.g.cshtml.cs
 /Users/andrewquan/Desktop/Projects/dental/obj/Debug/netcoreapp2.1/Razor/Views/Home/RegisterPartial.g.cshtml.cs
-/Users/andrewquan/Desktop/Projects/dental/obj/Debug/netcoreapp2.1/Razor/Views/Home/Appointment.g.cshtml.cs
-/Users/andrewquan/Desktop/Projects/dental/obj/Debug/netcoreapp2.1/Razor/Views/Home/NewAppointment.g.cshtml.cs
 >>>>>>> 893db55baf251b8a595c14fa20764a6f8cc6d4fe
 /Users/eugenebenitez/Desktop/C#_Projects/Dental-Estrada/obj/Debug/netcoreapp2.1/Razor/Views/Home/AppointmentProfile.g.cshtml.cs
 /Users/eugenebenitez/Desktop/C#_Projects/Dental-Estrada/obj/Debug/netcoreapp2.1/Razor/Views/Home/Inquiry.g.cshtml.cs
+/Users/andrewquan/Desktop/Projects/dental/obj/Debug/netcoreapp2.1/Razor/Views/Home/AppointmentProfile.g.cshtml.cs
+/Users/andrewquan/Desktop/Projects/dental/obj/Debug/netcoreapp2.1/Razor/Views/Home/Inquiry.g.cshtml.cs
+/Users/andrewquan/Desktop/Projects/dental/obj/Debug/netcoreapp2.1/Razor/Views/Home/New.g.cshtml.cs
+/Users/andrewquan/Desktop/Projects/dental/obj/Debug/netcoreapp2.1/Razor/Views/Home/Services.g.cshtml.cs
