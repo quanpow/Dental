@@ -54,7 +54,11 @@ using dental.Models;
             WriteLiteral("<!DOCTYPE html>\r\n<html>\r\n  ");
             EndContext();
             BeginContext(27, 47, false);
+<<<<<<< HEAD
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5e1c581968a74d6499eee8c17efa5df2", async() => {
+=======
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "83401c3b15fc4fab8d124f2d011ea89a", async() => {
+>>>>>>> c5b85d3521b048425cd54987c3d8ba84462c5426
                 BeginContext(33, 34, true);
                 WriteLiteral("\r\n      <title>Contact</title>\r\n  ");
                 EndContext();
@@ -73,6 +77,7 @@ using dental.Models;
             BeginContext(74, 4, true);
             WriteLiteral("\r\n  ");
             EndContext();
+<<<<<<< HEAD
             BeginContext(78, 326, false);
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e6db71322d7240f9857c27f8fdf15e48", async() => {
                 BeginContext(84, 313, true);
@@ -88,6 +93,12 @@ using dental.Models;
 src=""https://www.google.com/maps/embed/v1/search?q=451SBrandBlvdSanFernandoCA91340&key=AIzaSyAWVhpsBpoyphFz3qu3N3sFEnTiyOEEJ_o"" allowfullscreen></iframe></h1>
 
 ");
+=======
+            BeginContext(78, 257, false);
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "deb83409e1b34ed2acab376e03a5c778", async() => {
+                BeginContext(84, 244, true);
+                WriteLiteral("\r\n   \r\n\r\n\r\n<h1><iframe width=\"300\" height=\"250\" frameborder=\"0\" style=\"border:0\"\r\nsrc=\"https://www.google.com/maps/embed/v1/search?q=451SBrandBlvdSanFernandoCA91340&key=AIzaSyAWVhpsBpoyphFz3qu3N3sFEnTiyOEEJ_o\" allowfullscreen></iframe></h1>\r\n\r\n");
+>>>>>>> c5b85d3521b048425cd54987c3d8ba84462c5426
                 EndContext();
             }
             );

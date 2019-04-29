@@ -174,26 +174,58 @@ namespace dental.Controllers
         [Route("CreateAppt")]
         public IActionResult CreateAppointments(Appointment newAppointment)
         {
+            string newApptDay = newAppointment.StartDate.ToString("dd");
+            string newApptEnd = newAppointment.EndDate.ToString("dd");
+
             if (ModelState.IsValid)
             {
                 DateTime CurrentTime = DateTime.Now;
-                DateTime thisAppointment = newAppointment.StartDate;
 
-                if (thisAppointment < CurrentTime)
+                if (newAppointment.StartDate < CurrentTime)
                 {
                     @ViewBag.Error = "Date must be in the future.";
                     return View("New");
                 }
 
 
+                if (newAppointment.EndDate < newAppointment.StartDate)
+                {
+                    @ViewBag.Error = "End Date must be after Start Date";
+                    return View("New");
+                }
+
+
+                if (newApptDay != newApptEnd)
+                {
+                    @ViewBag.Error = "Appointments must be in the same day.";
+                    return View("New");
+                }
+
+
                 dbContext.Add(newAppointment);
                 dbContext.SaveChanges();
+
                 int id = newAppointment.AppointmentID;
                 string url = $"profile/{id}";
+
                 return base.Redirect(url);
             }
             return View("New");
         }
+
+        [HttpGet("admin/delete/{id}")]
+
+        public IActionResult DeleteAppointment(int id)
+        {
+            Appointment retAppointment = dbContext.Appointment
+            .SingleOrDefault(i => i.AppointmentID == id);
+
+            dbContext.Remove(retAppointment);
+            dbContext.SaveChanges();
+
+            return RedirectToAction("AdminDashboard");
+        }
+
 
 
         //?            END OF WEBSITE FEATURES
