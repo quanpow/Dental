@@ -80,3 +80,4 @@
 /Users/andrewquan/Desktop/Projects/dental/obj/Debug/netcoreapp2.1/Razor/Views/Home/Inquiry.g.cshtml.cs
 /Users/andrewquan/Desktop/Projects/dental/obj/Debug/netcoreapp2.1/Razor/Views/Home/New.g.cshtml.cs
 /Users/andrewquan/Desktop/Projects/dental/obj/Debug/netcoreapp2.1/Razor/Views/Home/Services.g.cshtml.cs
+/Users/andrewquan/Desktop/Projects/dental/obj/Debug/netcoreapp2.1/Razor/Views/Home/PaymentOptions.g.cshtml.cs

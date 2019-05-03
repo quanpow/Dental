@@ -70,6 +70,12 @@ namespace dental.Controllers
             return View("services");
         }
 
+        [HttpGet("paymentoptions")]
+        public IActionResult PaymentOptions()
+        {
+            return View();
+        }
+
 
         //!!!!!!!!!!!  POSTS
         //!!!!!!!!!!!  POSTS
