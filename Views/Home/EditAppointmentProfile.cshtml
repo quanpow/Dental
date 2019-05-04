@@ -1,38 +1,38 @@
 @using DentalEstrada.Models
 @model Appointment
 
-<h1>New Appointment <a class="btn btn-primary" href="/admin/dashboard" role="button">Dashboard</a></h1>
+<h1>Edit Appointment <a class="btn btn-primary" href="/admin/dashboard" role="button">Dashboard</a></h1>
 <br>
 <br>
-<form asp-action="CreateAppointments" asp-controller="Home" method="post">
+<form action="@Model.AppointmentID" method="post">
         <span asp-validation-for="CustomerName"></span>
         <label asp-for="CustomerName"></label>
         <br>
-        <input asp-for="CustomerName">
+        <input asp-for="CustomerName" value="@Model.CustomerName">
         <br><br>
 
         <span asp-validation-for="Phone"></span>
         <label asp-for="Phone"></label>
         <br>
-        <input asp-for="Phone">
+        <input asp-for="Phone" value="@Model.Phone">
         <br><br>
         @ViewBag.Error
         <span asp-validation-for="StartDate"></span>
         <label asp-for="StartDate"></label>
         <br>
-        <input asp-for="StartDate">
+        <input asp-for="StartDate" value="@Model.StartDate">
         <br><br>
 
         <span asp-validation-for="EndDate"></span>
         <label asp-for="EndDate"></label>
         <br>
-        <input asp-for="EndDate">
+        <input asp-for="EndDate" value="@Model.EndDate">
         <br><br>
 
         <span asp-validation-for="Description"></span>
         <label asp-for="Description"></label>
         <br>
-        <input asp-for="Description">
+        <input asp-for="Description" value="@Model.Description">
         <br><br>
         <br>
 

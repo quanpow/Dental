@@ -160,6 +160,22 @@ namespace dental.Controllers
             return View(thisAppointment);
         }
 
+        [HttpGet("admin/profile/edit/{id}")]
+        public IActionResult EditAppointmentProfile(int id)
+        {
+            if (HttpContext.Session.GetInt32("LoggedUser") == null)
+            {
+                return RedirectToAction("Index");
+            }
+
+
+            Appointment thisAppointment = dbContext.Appointment
+            .SingleOrDefault(i => i.AppointmentID == id);
+
+            return View(thisAppointment);
+        }
+
+
 
         //!!!!!!!!! ADMIN POST//!!!!!!!!! ADMIN POST//!!!!!!!!! ADMIN POST
 
@@ -220,6 +236,22 @@ namespace dental.Controllers
             return RedirectToAction("AdminDashboard");
         }
 
+        [HttpPost("admin/profile/edit/{id}")]
+        public IActionResult EditAppointment(Appointment editAppointment, int id)
+        {
+            Appointment retAppointment = dbContext.Appointment
+            .SingleOrDefault(i => i.AppointmentID == id);
+
+            retAppointment.CustomerName = editAppointment.CustomerName;
+            retAppointment.Phone = editAppointment.Phone;
+            retAppointment.StartDate = editAppointment.StartDate;
+            retAppointment.EndDate = editAppointment.EndDate;
+            retAppointment.Description = editAppointment.Description;
+            dbContext.SaveChanges();
+
+            int aid = retAppointment.AppointmentID;
+            return RedirectToAction("AdminDashboard");
+        }
 
 
         //?            END OF WEBSITE FEATURES

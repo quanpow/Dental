@@ -78,3 +78,4 @@
 >>>>>>> 893db55baf251b8a595c14fa20764a6f8cc6d4fe
 /Users/eugenebenitez/Desktop/C#_Projects/Dental-Estrada/obj/Debug/netcoreapp2.1/Razor/Views/Home/AppointmentProfile.g.cshtml.cs
 /Users/eugenebenitez/Desktop/C#_Projects/Dental-Estrada/obj/Debug/netcoreapp2.1/Razor/Views/Home/Inquiry.g.cshtml.cs
+/Users/eugenebenitez/Desktop/C#_Projects/Dental-Estrada/obj/Debug/netcoreapp2.1/Razor/Views/Home/EditAppointmentProfile.g.cshtml.cs
